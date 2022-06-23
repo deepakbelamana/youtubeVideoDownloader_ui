@@ -11,6 +11,6 @@ export class ApiServicesService {
 
   sendUrl(url:any)
   {
-    return this.http.post(this.baseUrl+'getVideo',url)
+    return this.http.post(this.baseUrl+'getVideo',url,{responseType:'blob'})
   }
 }

@@ -1,4 +1,13 @@
-<div>
-    <input type="text" placeholder="enter the URL"  [(ngModel)]='urlHandler'/>
-    <button (click)="submitUrl()">submit</button>
+<div class="container">
+    <mat-form-field>
+           <!--urlHandler-->
+        <input matInput type="text" placeholder="enter the URL" [(ngModel)]='urlHandler' />
+    </mat-form-field>
+
+    <mat-form-field>
+        <!-- require filename to save the file as -->
+        <input matInput type="text" placeholder="enter file name" [(ngModel)]="fileName" />
+    </mat-form-field>    
+    
+    <button mat-raised-button (click)="submitUrl()">download</button>
 </div>
