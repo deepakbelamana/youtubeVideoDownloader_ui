@@ -25,6 +25,6 @@ export class HomeComponent implements OnInit {
         anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
         anchor.click();
         
-      },err=>{ console.log(err)})
+      },err=>{ alert('servers unreachable..! try again')})
    }
 }
