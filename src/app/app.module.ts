@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { ToastrModule } from 'ngx-toastr'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,12 @@ import {MatButtonModule} from '@angular/material/button';
     HttpClientModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    ToastrModule.forRoot(
+      {
+        closeButton:true,
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
