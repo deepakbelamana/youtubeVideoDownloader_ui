@@ -8,7 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { ToastrModule } from 'ngx-toastr'; 
+import { ToastrModule } from 'ngx-toastr';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { ToastrModule } from 'ngx-toastr';
       {
         closeButton:true,
       }
-    )
+    ),
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,20 @@
 <div class="container">
-    <mat-form-field>
-           <!--urlHandler-->
-        <input matInput type="text" placeholder="Paste the URL" [(ngModel)]='urlHandler' />
-    </mat-form-field>
+  <mat-form-field>
+    <!--urlHandler-->
+    <input matInput type="text" placeholder="Paste the URL" [(ngModel)]="urlHandler" />
+  </mat-form-field>
 
-    <mat-form-field>
-        <!-- require filename to save the file as -->
-        <input matInput type="text" placeholder="enter file name" [(ngModel)]="fileName" />
-    </mat-form-field>    
-    
-    <button mat-raised-button (click)="submitUrl()">download</button>
+  <mat-form-field>
+    <!-- require filename to save the file as -->
+    <input matInput type="text" placeholder="enter file name" [(ngModel)]="fileName" />
+  </mat-form-field>
+
+  <!--adding spinner after clicking download button and will stop after the file gets downloaded-->
+  <ng-container>
+    <mat-spinner  *ngIf="startDownload" diameter="70"></mat-spinner>
+  </ng-container>
+
+  <button mat-raised-button [disabled]="startDownload" (click)="submitUrl()">
+    download
+  </button>
 </div>
