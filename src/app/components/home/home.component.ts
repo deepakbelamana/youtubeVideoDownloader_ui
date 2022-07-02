@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
           anchor.click();
           this.startDownload = false;
           this.toastr.success('Downloaded');
+          this.deleteUrl()
         },
         (err) => {
           this.startDownload = false;
@@ -43,5 +44,10 @@ export class HomeComponent implements OnInit {
       this.startDownload = false;
       this.toastr.error('copy and paste the video url ', 'Empty Url');
     }
+  }
+
+  deleteUrl() //this will call the service to delete the files that were downloaded into the root folder of server
+  {
+    this.apiService.deleteDownloadedFilesFromserver()
   }
 }

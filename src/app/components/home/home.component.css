@@ -8,3 +8,14 @@
     position: relative;
 }
 
+.informationTag
+{
+  position: relative;
+  left:clamp(100px,auto,1000px);
+  font-size: auto;
+  width: auto;
+  margin-top: clamp(100px,35vh,1080px);
+  margin-left:15%;
+  margin-right: 15%;
+  text-align: center;
+}

@@ -10,6 +10,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ToastrModule } from 'ngx-toastr';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
+    NgbAlertModule,
+    NgbModule,
     ToastrModule.forRoot(
       {
         closeButton:true,
