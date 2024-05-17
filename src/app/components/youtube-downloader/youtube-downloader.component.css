@@ -1,12 +1,10 @@
-/* .container
+.container
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    top:clamp(100px,30%,800px);
-    position: relative;
-} */
+}
 
 /* .informationTag
 {

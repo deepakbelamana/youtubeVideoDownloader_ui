@@ -1,0 +1,19 @@
+<div class="container">
+    <mat-form-field>
+      <!--urlHandler-->
+      <input matInput type="text" placeholder="Paste the URL" [(ngModel)]="tweeturlHandler" 
+      name="twitterUrl" 
+      #twitterUrl
+      />
+    </mat-form-field>
+
+  
+    <!--adding spinner after clicking download button and will stop after the file gets downloaded-->
+    <ng-container>
+      <mat-spinner  *ngIf="startDownload" diameter="70"></mat-spinner>
+    </ng-container>
+  
+    <button mat-raised-button [disabled]="startDownload" (click)="submitTweetUrl()">
+      download
+    </button>
+  </div>

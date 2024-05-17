@@ -12,10 +12,17 @@ import { ToastrModule } from 'ngx-toastr';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatTabsModule} from '@angular/material/tabs';
+import { TwitterDownloaderComponent } from './components/twitter-downloader/twitter-downloader.component';
+import { YoutubeDownloaderComponent } from './components/youtube-downloader/youtube-downloader.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    TwitterDownloaderComponent,
+    YoutubeDownloaderComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +39,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         closeButton:true,
       }
     ),
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule, 
+    MatExpansionModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
